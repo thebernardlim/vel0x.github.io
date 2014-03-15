@@ -1,12 +1,11 @@
 ---
 layout: post
 title: Adding space in LaTeX maths expressions
-cover: cover.jpg
-date:   2013-12-09 12:00:00
+date:   2013-12-13 17:44:01
 categories: posts
 ---
             
-So this is a simple one which is used everwhere. Essentially I was trying to express some run times in LaTeX using the following:
+So this is a simple one which is used everywhere. Essentially I was trying to express some run times in LaTeX using the following:
 
     O(n log(n))
 

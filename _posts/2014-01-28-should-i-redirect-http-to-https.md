@@ -1,3 +1,10 @@
+---
+layout: post
+title: Should I redirect HTTP to HTTPS?
+date:   2014-01-28 12:15:57
+categories: posts
+---
+
 No.
 
 I've seen a lot of things about this all saying that it's a fantastic idea. Yes there are complaints about worse performance due to the complexity, cost of certificates, etc. but there is an extremely important reason why you should not redirect HTTP to HTTPS: It gives a false sense of trust. 
