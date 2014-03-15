@@ -1,3 +1,6 @@
-name: Flex
-markdown: redcarpet
+name: "Myers.io"
+url: "http://myers.io"
+markdown: rdiscount
 pygments: true
+paginate: 10
+permalink: pretty
