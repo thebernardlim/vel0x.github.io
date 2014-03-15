@@ -1,0 +1,10 @@
+<p>So this is a simple one which is used everwhere. Essentially I was trying to express some run times in LaTeX using the following:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">O(n log(n))
+</code></pre></div>
+<p>However, this displayed as:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">O(nlog(n))
+</code></pre></div>
+<p>The solution is to add some horizontal space using real units as follows:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">O(n\hspace{2 mm}log(n))
+</code></pre></div>
+<p>I found 2mm to be about right when using <code>pdflatex</code>, but feel free to play with it your self. </p>
