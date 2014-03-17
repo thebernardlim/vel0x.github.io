@@ -1,0 +1,29 @@
+<div class="sidebar" id="sidebar">
+    <div class="header">
+        <span class="tagline">My name is Dale Myers and I am a computer science student at the University of Edinburgh. I am in my 5th and final year of the Master of Informatics degree at the university.</span>
+    </div>
+    <div class="posts">
+        <ul class="posts-list">
+            {% for post in site.posts %}
+                <li class="post-link">
+                    <a class="post-title" href="{{ post.url }}">
+                        <span class="post-date">{{ post.date | date_to_string }}</span>
+                        {{ post.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer">
+        <span id="footer-links">
+            <a href="http://dale.myers.io/" class="footer-link">CV</a>
+            <span class="separator">&bull;</span>
+            <a href="https://twitter.com/Vel0x" class="footer-link">Twitter</a>
+            <span class="separator">&bull;</span>
+            <a href="http://www.linkedin.com/in/dalemmyers" class="footer-link">LinkedIn</a>
+            <span class="separator">&bull;</span>
+            <a href="http://pgp.mit.edu/pks/lookup?op=get&search=0x4996726D1DA5898D" class="footer-link">PGP Key</a>
+        </span>
+    </div>
+</div>
+
