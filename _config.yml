@@ -2,5 +2,5 @@ name: "Myers.io"
 url: "http://myers.io"
 markdown: rdiscount
 pygments: true
-paginate: 10
+paginate: 5
 permalink: pretty

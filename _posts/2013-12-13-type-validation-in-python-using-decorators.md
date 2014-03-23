@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Type validation in Python using decorators
-date:   2014-01-28 12:15:57
+date:   2013-10-25 13:42:12
 categories: posts
 ---
 

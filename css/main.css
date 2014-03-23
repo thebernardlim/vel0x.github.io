@@ -188,6 +188,10 @@ a:hover {
   border: none;
 }
 
+#title a {
+    color: #444444;
+}
+
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
@@ -213,11 +217,10 @@ a:hover {
 }
 
 .sidebar {
-  float: left;
-  width: 14%;
-  padding-left: 11em;
-  padding-right: 2.125em;
-  border-right: 1px solid #e7e7e7;
+  float: right;
+  width: 240px;
+  padding: 30px;
+  border-left: 1px solid #e7e7e7;
 }
 
 .content {
