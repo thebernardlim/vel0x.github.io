@@ -2,7 +2,7 @@
 layout: post
 title: Adding space in LaTeX maths expressions
 date:   2013-12-13 17:44:01
-categories: posts
+tags: [latex]
 ---
             
 So this is a simple one which is used everywhere. Essentially I was trying to express some run times in LaTeX using the following:

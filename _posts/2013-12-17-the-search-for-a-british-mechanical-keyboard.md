@@ -2,7 +2,7 @@
 layout: post
 title: The Search for a British Mechanical Keyboard
 date:   2014-01-28 12:15:57
-categories: posts
+tags: [keyboard, UK, Britain]
 ---
 
 Oh, and I wanted it to be backlit. And have dedicated media keys. And cherry blue switches. 
