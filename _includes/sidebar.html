@@ -4,7 +4,7 @@
     </div>
     <div class="posts">
         <ul class="posts-list">
-            {% for post in site.posts %}
+            {% for post in site.posts limit:5 %}
                 <li class="post-link">
                     <a class="post-title" href="{{ post.url }}">
                         <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -13,6 +13,9 @@
                 </li>
             {% endfor %}
         </ul>
+    </div>
+    <div class="archive">
+        <a href="/archive">Archive</a>
     </div>
     <div class="footer">
         <span id="footer-links">

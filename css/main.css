@@ -18,7 +18,7 @@ html, body {
 body {
   color: #333;
   background-color: #fafbfc;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-weight: 400;
   font-size: 0.85em;
   overflow: hidden;
@@ -136,7 +136,6 @@ a:hover {
   color: #494949;
   margin-bottom: 0.35em;
   font-size: 3.5em;
-  text-transform: uppercase;
 }
 
 .post {
@@ -238,7 +237,6 @@ a:hover {
 .post-title {
   font-weight: 600;
   font-size: 1.4em;
-  text-transform: uppercase;
 }
 
 .post-date {
@@ -262,6 +260,15 @@ a:hover {
 #sidebar-button:active,
 #sidebar-button:hover {
   opacity: 0.7;
+}
+
+.archive {
+    text-align: center;
+    padding-bottom:10px;
+}
+
+.archive a{
+    color: #444444;
 }
 
 /*****************************************************************************/
