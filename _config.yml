@@ -34,10 +34,12 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-#  - title: About
-#    url: /about/
+  - title: About
+    url: /about/
   - title: Posts
     url: /posts/
+  - title: "<i class=\"icon-feed\"></i>"
+    url: /feed.xml
 #  - title: Theme Setup
 #    url: /theme-setup/
 #  - title: Made Mistakes
