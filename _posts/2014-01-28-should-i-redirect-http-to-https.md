@@ -13,4 +13,4 @@ Imagine a user, Alice, who connects to `http://example.com`. Alice has been here
 
 A different attack is an active man in the middle attack where the attacker can watch for HTTP traffic and redirects to HTTPS and spoof these websites using similar looking urls. An example of this was presented back in 2009 at Black Hat DC: <http://www.thoughtcrime.org/software/sslstrip/>
 
-Fortunately there is a method to do this correctly. The [HSTS](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) protocol ensures that traffic only communicates with a server using HTTPS, which eliminates the above problems. 
+Fortunately there is a method to do this correctly. The [HSTS](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) protocol ensures that traffic only communicates with a server using HTTPS. Generally this would mean that you have to make at least one HTTP connection to the site, which is still vulnerable to an MITM attack, however browsers such as Chrome and  Firefox keep and curate lists of websites with this flag set so that you never have to risk connecting through anything other than HTTPS.  
