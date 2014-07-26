@@ -23,7 +23,7 @@ The first bit of each byte of the character also stores information (remember, i
 the first bit of a character is set then the character is lower case, if it is 
 not set it is the same character but uppercase). 
 
-The first bit of the first byte specifies if the chunk is ancilliary or not. If
+The first bit of the first byte specifies if the chunk is ancillary or not. If
 it is set, decoders can safely ignore this chunk. 
 
 The first bit of the second byte denotes whether the chunk is a private chunk,
@@ -34,7 +34,7 @@ The first bit of the third byte is currently reserved and must be set to 0.
 
 The first bit of the fourth byte is used to signal information to PNG editors.
 It is a flag informing editors of whether it is safe to copy this chunk even if
-it has no idea what the chunk does. This is to stop errors from occuring in
+it has no idea what the chunk does. This is to stop errors from occurring in
 chunk copying should they be expecting a certain ordering. 
 
 This research into PNG chunks was somewhat hindered by the fact that I did not
