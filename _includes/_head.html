@@ -48,6 +48,7 @@
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content={% if page.image.feature contains 'http://' %}"{{ page.image.feature }}"{% elsif page.image.feature contains 'https://' %}"{{ page.image.feature }}"{% else %}"/images/{{ page.image.feature }}"{% endif %}/>
 
 {% if site.google_verify %}<!-- Webmaster Tools verfication -->
 <meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
