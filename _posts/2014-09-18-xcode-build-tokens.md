@@ -8,7 +8,7 @@ tags: [xcode, build, programming, os x]
 
 ---
 
-Recently, I was working with a larger iOS project than I usually do. This
+Recently, I was working with a larger iOS project than I usually do. This 
 project involved creating a library and using it in other applications as well
 as testing it. In order to make this as painless as possible I started using
 bash script to make my builds as efficient as possible. In doing this
