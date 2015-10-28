@@ -1,50 +1,7 @@
 title:            myers.io
 description:      Dale Myers' blog
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://myers.io
-
-# Owner/author information
-owner:
-  name:           Dale Myers
-  avatar:         bio-photo.jpg
-  bio:            "Software Engineer at Microsoft, currently working on Office for iOS and OS X."
-  email:          dale@myers.io
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        Vel0x
-  facebook:       
-  github:         Vel0x
-  stackoverflow: 
-  linkedin:       dalemmyers
-  instagram:      
-  lastfm:         
-  tumblr: 
-  pinterest: 
-  foursquare: 
-  steam: 
-  dribbble: 
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus: DaleMyers1
-
-# Analytics and webmaster tools stuff goes here
-google_analytics: UA-46471308-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about/
-  - title: Posts
-    url: /posts/
-  - title: "<i class=\"icon-feed\"></i>"
-    url: /feed.xml
-#  - title: Theme Setup
-#    url: /theme-setup/
-#  - title: Made Mistakes
-#    url: http://mademistakes.com
-#    external: true
+url:              http://188.226.173.196
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/London
@@ -55,6 +12,13 @@ markdown:    kramdown
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:year/:month/:day/:title/
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
+gems:
+  - jekyll-sitemap
+
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -62,12 +26,46 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+coderay:
+  coderay_line_numbers: 
+  coderay_line_numbers_start: 1
+  coderay_tab_width: 4
+  coderay_bold_every: 10
+  coderay_css: class
+
+# Site owner
+owner:
+  name: Dale Myers
+  avatar: bio-photo.jpg
+  bio: "Software Engineer at Microsoft, currently working on Office for iOS and OS X."
+  email: contact@myers.io
+  disqus-shortname:
+  twitter: Vel0x
+  facebook: #username
+  google:
+    plus: DaleMyers1
+    analytics: UA-46471308-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: Vel0x 
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: dalemmyers
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

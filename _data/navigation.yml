@@ -1,0 +1,11 @@
+# Site navigation links
+
+- title: About
+  url: /about/
+
+- title: All Posts
+  url: /posts/
+
+- title: "<i class=\"icon-feed\"></i>"
+  url: /feed.xml
+

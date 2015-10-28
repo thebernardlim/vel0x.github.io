@@ -13,34 +13,13 @@
 
 {% include _navigation.html %}
 
-<!-- Facebook SDK -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1711727462386086',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 {% if page.image.feature %}
   <div class="image-wrap">
   <img src=
-    {% if page.image.feature contains 'http://' %}
-      "{{ page.image.feature }}"
-    {% elsif page.image.feature contains 'https://' %}
+    {% if page.image.feature contains 'http' %}
       "{{ page.image.feature }}"
     {% else %}
-      "/images/{{ page.image.feature }}"
+      "{{ site.url }}/images/{{ page.image.feature }}"
     {% endif %}
   alt="{{ page.title }} feature image">
   {% if page.image.credit %}
@@ -53,148 +32,46 @@
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
-  <article>
+  <article class="post">
     <div class="headline-wrap">
-        <h1>
-            <a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
-            {% if post.link %}
-                <a href="{{ post.link }}"><img src="/images/link.svg" width=16 height=16></a>
-            {% endif %}
-
-        </h1>
+      {% if page.link %}
+        <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
+      {% else %}
+        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
+      {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       {{ content }}
       <hr />
       <footer role="contentinfo">
-        <div class="article-author-bottom">
-          {% include _author-bio.html %}
-        </div>
-        <p class="byline">
-            <strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %} by <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a>.
-        </p>
-        
-        <div class="socialbuttons">
-            <!-- Twitter Button -->
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="twitterapi" data-lang="en">Tweet</a>
-            <script>
-                !function(d,s,id){
-                    var js,fjs=d.getElementsByTagName(s)[0];
-                    if(!d.getElementById(id)){
-                        js=d.createElement(s);
-                        js.id=id;
-                        js.src="https://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js,fjs);
-                    }
-                }
-                (document,"script","twitter-wjs");
-            </script>
-
-
-            <!-- Facebook Button -->
-            <div id="fb-root" style="display:inline;"></div>
-            <script>
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=218596128182792";
-                    fjs.parentNode.insertBefore(js, fjs);
-               }(document, 'script', 'facebook-jssdk'));
-            </script>
-            <div class="fb-like" style="display:inline;" data-href="{{ site.url }}{{ page.url }}" data-width="200" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
-
-
-            <!-- Google Plus Button -->
-            <div class="g-plusone" data-size="tall"></div>
-
-            <script type="text/javascript">
-                (function() {
-                    var po = document.createElement('script');
-                    po.type = 'text/javascript';
-                    po.async = true;
-                    po.src = 'https://apis.google.com/js/platform.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(po, s);
-                })();
-            </script>
-
-
-            <!-- Hacker News Button -->
-            <a href="https://news.ycombinator.com/submit" class="hn-button" data-count="vertical" data-style="twitter">Vote on Hacker News</a>
-            <script type="text/javascript">
-                var HN=[];
-                HN.factory=function(e){
-                    return function(){
-                        HN.push([e].concat(Array.prototype.slice.call(arguments,0)))
-                    };
-                },
-                HN.on=HN.factory("on"),
-                HN.once=HN.factory("once"),
-                HN.off=HN.factory("off"),
-                HN.emit=HN.factory("emit"),
-                HN.load=function(){
-                    var e="hn-button.js";
-                    if(document.getElementById(e)){
-                        return;
-                    }
-                    var t=document.createElement("script");
-                    t.id=e,
-                    t.src="//hn-button.herokuapp.com/hn-button.js";
-                    var n=document.getElementsByTagName("script")[0];
-                    n.parentNode.insertBefore(t,n)
-                },
-                HN.load();
-            </script>
-        </div>
+        {% if page.share != false %}{% include _social-share-custom.html %}{% endif %}
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
+  {% if site.owner.disqus-shortname and page.comments == true %}
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+  {% endif %}
   </article>
 </div><!-- /#main -->
 
 <div class="footer-wrap">
+  {% if site.related_posts.size > 0 %}
   <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
     <ul>
     {% for post in site.related_posts limit:3 %}
-        <li>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            {% if post.link %}
-                <a href="{{ post.link }}"><img src="/images/link.svg" width=12 height=12></a>
-            {% endif %}
-        </li>
+      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% endfor %}
     </ul>
     <hr />
-    {% if page.comments %}
-    <div class="comments">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            var disqus_shortname = 'myersio'; // required: replace example with your forum shortname
-            var disqus_identifier = '{{ page.id }}';
-            var disqus_title = '{{ page.title }}';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-    </div>
-    <hr>
-    {% endif %}
- 
   </div><!-- /.related-articles -->
+  {% endif %}
   <footer>
     {% include _footer.html %}
   </footer>
 </div><!-- /.footer-wrap -->
 
-{% include _scripts.html %}	        
+{% include _scripts.html %}
 
 </body>
 </html>
