@@ -6,6 +6,6 @@
 - title: All Posts
   url: /posts/
 
-- title: "<i class=\"icon-feed\"></i>"
+- title: <i class="fa fa-fw fa-rss"></i> 
   url: /feed.xml
 
