@@ -65,6 +65,7 @@ owner:
   weibo: #username
   flickr: #username
   codepen: #username
+  keybase: velox
 
 
 include: [".htaccess"]
