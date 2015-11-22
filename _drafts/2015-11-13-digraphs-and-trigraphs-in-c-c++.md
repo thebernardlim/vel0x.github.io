@@ -1,22 +1,25 @@
 ---
 layout: post
 title: Digraphs and Trigraphs in C/C++
-date: 2014-09-06 12:00:00
+date: 2015-11-13 12:00:00
 tags: [programming, C, C++]
 ---
 
-Recently a mention of the proposal to remove trigraphs from C++1z[^proposal] (the version
-after C++14) caught my eye. While I was aware of the existence of these,
-although I must admit that this was a recent encounter, many people were not. 
-The best thing to do, I figured, was to explain about these old character
-sequences. 
+Last year it was proposed that trigraphs be removed from C++17[^proposal].
+Trigraphs are one of those mythical creatures, that many have heard about, but
+few have seen. Unfortunately, or perhaps fortunately, depending on your
+viewpoint, the proposal passed and trigraphs will be removed in C++17[^removal].
+However, they will continue to work in older versions, as well as C99, and as
+far as I can tell, C11. 
 
 Digraphs and trigraphs originated in ANSI C (although other languages may have had
-support for variants before this). They exist due to the difficulty of typing
+support for variants before this), and exist due to the difficulty of typing
 certain characters in various keyboard layouts and character sets. The original
 spec decided that extra support was needed for the following characters:
 
+{% raw %}
     #\^[]|{}~
+{% endraw %}
 
 So what are trigraphs then? Trigraphs are an alternative method of representing
 these characters. Each trigraph begins with two question marks and is then
@@ -99,11 +102,19 @@ One of the useful uses of trigraphs are the additional ones added into C++.
 <tr><td>not_eq</td><td>!=</td></tr>
 </table>
 
+The question remains, however, should you use these? Well, considering it is
+2015, the answer is pretty clearly no. They are a vestige of a long forgotten
+past without standardised keyboards. That said, the newer C++ digraphs are
+rather useful and shouldn't be discounted immediately. Just remember, pay
+attention to your companies coding standards (or your own if it's a personal
+project). 
 
+If you really want to upset your co-workers however, instead of using digraphs
+and trigraphs, use something like this instead: <https://github.com/reinderien/mimic>
 
-
-<http://en.wikipedia.org/wiki/Digraphs_and_trigraphs>
 
 [^proposal]:<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3981.html>
+
+[^removal]:<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4210.pdf>
 
 
