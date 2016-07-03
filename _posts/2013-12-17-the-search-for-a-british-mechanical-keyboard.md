@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: The Search for a British Mechanical Keyboard
 date:   2013-12-17 12:15:57
 tags: [keyboard, UK, Britain]

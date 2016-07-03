@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Websites Which Block Right-Click
 date: 2014-10-13 12:00:00
 tags: [we, web development, javascript, web]

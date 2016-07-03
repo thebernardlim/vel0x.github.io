@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: The Need for a Password Security Group
 date:   2014-05-16 12:00:00
 tags: [password, security, encryption]

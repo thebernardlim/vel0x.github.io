@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Everything You Ever Wanted to Know About PNGs 
 date: 2014-07-30 12:00:00
 tags: [png, image]

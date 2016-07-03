@@ -1,6 +1,6 @@
 ---
 
-layout: post
+layout: single
 title: Xcode Build Tokens
 date: 2014-09-18 14:44:24
 comments: disqus

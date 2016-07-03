@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 1Password Leaks Your Data 
 date: 2015-10-22 14:19:00
 tags: [software, security, passwords, password managers, 1Password]

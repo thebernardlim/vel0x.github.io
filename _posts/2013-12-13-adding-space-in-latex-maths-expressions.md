@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Adding space in LaTeX maths expressions
 date:   2013-12-13 17:44:01
 tags: [latex]

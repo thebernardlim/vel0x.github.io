@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Type validation in Python using decorators
 date:   2013-10-25 13:42:12
 tags: [python, types, decorators]

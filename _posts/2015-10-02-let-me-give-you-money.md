@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Let Me Give You Money!
 date: 2015-10-02 20:00:00
 tags: [software, advertising, payment]

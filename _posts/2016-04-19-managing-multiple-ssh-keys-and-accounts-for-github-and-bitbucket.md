@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Managing Multiple SSH Keys and Accounts for Github and Bitbucket
 date: 2016-04-19 12:00:00
 tags: [git, ssh, keys, security]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Star Trek Poster Commission
 date: 2016-05-07 12:00:00
 tags: [Star Trek, Poster, Enterprise]

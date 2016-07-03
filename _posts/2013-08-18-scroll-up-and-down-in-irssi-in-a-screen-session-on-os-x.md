@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Scroll up and down in irssi in a screen session on OS X
 description: Instructions on how to scroll in irssi when using screen on OS X
 date:   2013-08-18 12:15:57

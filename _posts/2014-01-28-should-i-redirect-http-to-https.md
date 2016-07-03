@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Should I redirect HTTP to HTTPS?
 date:   2014-01-28 12:15:57
 tags: [http, https, ssl, hsts, security, encryption]

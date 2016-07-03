@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: SpaceX Will Ruin Government Agencies
 date:   2014-05-30 12:00:00
 tags: [space, spacex, NASA, government]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Doing Favicons Correctly
 date: 2014-09-21 12:00:00
 tags: [favicon, http, internet, html]

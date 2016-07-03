@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: What is systemd and Why Should I Care?
 date: 2014-10-21 12:00:00
 tags: [unix, Linux, OS]
