@@ -1,0 +1,35 @@
+<script src="{{ base_path }}/assets/js/main.min.js"></script>
+
+{% include analytics.html %}
+
+<script>
+    // Handle logging of clicks
+    var handleLinkClick = function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+            function () {
+                document.location = url;
+            }
+        });
+    }
+
+    function addOnClickEvent() {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            var onClickAttribute = document.createAttribute("onclick");
+            onClickAttribute.value = "handleLinkClick('" + link.href + "'); return false;";
+            link.setAttributeNode(onClickAttribute);
+        }
+    }
+
+    if (window.addEventListener) {
+        window.addEventListener("load", addOnClickEvent, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", addOnClickEvent);
+    } else {
+        window.onload = addOnClickEvent;
+    }
+</script>
+
+{% include /comments-providers/scripts.html %}
+

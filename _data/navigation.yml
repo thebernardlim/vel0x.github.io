@@ -1,11 +1,11 @@
-# Site navigation links
+# main links links
+main:
+  - title: About
+    url: /about/
 
-- title: About
-  url: /about/
+  - title: All Posts
+    url: /posts/
 
-- title: All Posts
-  url: /posts/
-
-- title: <i class="fa fa-fw fa-rss"></i> 
-  url: /feed.xml
+  - title: <i class="fa fa-fw fa-rss"></i> 
+    url: /feed.xml
 
