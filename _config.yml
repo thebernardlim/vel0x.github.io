@@ -13,7 +13,7 @@ name                     : "Dale Myers"
 description              : "Dale Myers' blog"
 url                      : "https://myers.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-gh_repo                  : 
+repository               : 
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -28,6 +28,8 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+atom_feed:
+  path                   : # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification :
@@ -56,9 +58,6 @@ analytics:
   google:
       tracking_id          : "UA-46471308-1"
 
-# Google AdSense
-google_ad_client         :
-google_ad_slot           :
 
 
 # Site Author
@@ -155,20 +154,20 @@ timezone: Europe/London # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 
 # Plugins
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+# gems:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-gist
+#   - jekyll-feed
+#   - jemoji
 
 # mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+# whitelist:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-gist
+#   - jekyll-feed
+#   - jemoji
 
 
 # Archives
@@ -199,12 +198,6 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-coderay:
-  coderay_line_numbers: 
-  coderay_line_numbers_start: 1
-  coderay_tab_width: 4
-  coderay_bold_every: 10
-  coderay_css: class
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -212,6 +205,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
 
 defaults:
   - scope:
