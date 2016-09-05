@@ -19,7 +19,7 @@ save others from the hours of sleuthing when trying to learn about PNG, I
 decided to write a blog post giving an overview of the format. If you want to
 know more about PNG, read on. 
 
-##The PNG File Format
+## The PNG File Format
 
 The very first part of a PNG image is the PNG file signature. The signature is
 there to identify a file as a PNG file as well as allowing detection of file
@@ -47,18 +47,18 @@ The final byte is the opposite of the carriage return and line feed check.
 Any software which deals with PNG files must confirm that the header is exactly
 as expected. If it is not exactly the same then the software should abort. 
 
-###Chunks
+### Chunks
 
 Following the header there is a sequence of chunks. Chunks are the core of the
 PNG format with all further information being contained within a chunk. Each
 chunk is stored as a tuple of either 3 or 4 values and are laid out as follows.
 
-####First Value
+#### First Value
 
 The first value is a length, which is a 4 byte integer. This length specifies 
 how long the data portion of this chunk will be.
 
-####Second Value
+#### Second Value
 
 The second value is the chunk identifier. This chunk identifier is a 4
 character ASCII sequence. This sequence not only identifies the chunk, but also
@@ -84,24 +84,24 @@ reason for this being that the chunk may be dependent on the data in the image.
 If the image changes then this chunk should also be updated, but cannot be if
 the editor does not understand it. 
 
-####Third Value
+#### Third Value
 
 The third value in the chunk tuple is the data of the chunk. If the length
 specified by the first value is 0, then this value does not appear. 
 
-####Fourth Value
+#### Fourth Value
 
 The fourth value is a 4 byte CRC.
 
-###Public chunks
+### Public chunks
 
 From this point you have everything you need to know about the basic format of
 PNG images. However, it is useful to know some of the ones which are more common
 in PNG files, including some which must always appear. 
 
-####Required Chunks
+#### Required Chunks
 
-#####IHDR
+##### IHDR
 
 This chunk must appear, as can be seen from the uppercase first character, and
 it must be the first chunk in the file. The chunk has the following fields:
@@ -154,7 +154,7 @@ A pictorial representation, found on the Wikipedia page is the following:
 ![Pictorial representation of the Adam7 interlacing
 algorithm](http://upload.wikimedia.org/wikipedia/commons/2/27/Adam7_passes.gif)
 
-#####PLTE
+##### PLTE
 
 This chunk represents the palette of the image. It can contain anywhere between
 1 and 256 entries, with each entry being a 3 byte RGB tuple. This chunk is
@@ -163,7 +163,7 @@ marked as required, but only must appear if the colour type, specified in the
 must not appear for the remaining 2. There should also only be one *PLTE* chunk. 
 
 
-#####IDAT
+##### IDAT
 
 This chunk is the meat of PNG files. It contains the image data, after being
 filtered and run through the compression algorithm. The compression algorithm,
@@ -175,37 +175,37 @@ algorithms is beyond the scope of this post, but should you wish to learn more,
 have a look here: <http://www.w3.org/TR/PNG/#9Filters> Alternatively, if this
 post gets enough interest I may write one later. 
          
-#####IEND
+##### IEND
 
 This chunk ends a PNG file. It has no data.
 
-####Ancillary Chunks
+#### Ancillary Chunks
 
 There are many ancillary chunks and it would do no one any favours to describe
 them all. Here are a few of the most common. 
 
-#####tRNS
+##### tRNS
 
 This chunk specifies the transparency options of the file. If this chunk is
 present, it specifies a colour which is to be rendered as transparent. This may
 be done by specifying the colour directly, or in the case of there being a
 palette, it specifies the index. 
 
-#####gAMA
+##### gAMA
 
 This chunk specifies the gamma information. Since all displays are not exactly
 the same, we occasionally need to include further information to help display
 the image as intended in various locations. For further information on gamma in
 PNG look here: <http://www.libpng.org/pub/png/spec/1.2/PNG-GammaAppendix.html>
 
-#####tEXt
+##### tEXt
 
 This chunk can contain information in a key-value format. The key and value are
 separated by a null byte. Only one key-value pair is allowed per chunk. The key
 can be anything up to 79 bytes in length, however the following are predefined
 and should be used if appropriate: *Title, Author, Description, Copyright, CreationTime, Software, Disclaimer, Warning, Source, Comment*
 
-#####tIME
+##### tIME
 
 This chunk specifies the last modification time of the image. The layout is as
 follows:
@@ -221,17 +221,17 @@ follows:
 | Second    | 1 byte    | 0-60 (accounts for leap seconds)  |
 
 
-#####bKGD
+##### bKGD
 
 This chunk specifies a background colour to be used when displaying the image. 
 
-#####pHYs
+##### pHYs
 
 This chunk gives the relationship between pixels and real world measurements.
 For example, specifying that the image was scanned at 300dpi, which allows us to
 then print the image at the correct size once more. 
 
-###Conclusion
+### Conclusion
 
 So with all the information there about PNG files, what can you do with it? Well
 the first thing is, you can optimise any PNG images you have. The tool

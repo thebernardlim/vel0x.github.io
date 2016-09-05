@@ -11,7 +11,7 @@ extremely opposed to systemd as it goes against the Unix philosophy. Most Linux
 users, however, have no idea what it is or why it is a good or bad thing. Here
 is a basic overview of init systems and systemd. 
 
-##What is it?
+## What is it?
 
 When you boot a Linux machine, once the kernel has finished getting itself ready a new 
 process is launched which is termed the init process. This process is a
@@ -95,7 +95,7 @@ is that upstart and systemd parallelise this task and so they load everything
 much faster than sysvinit. 
 
 
-##Why should I care?
+## Why should I care?
 
 So this is where things get more complicated. Basically, the Unix philosophy is
 that each piece of software should do one thing and do it well. The idea means
